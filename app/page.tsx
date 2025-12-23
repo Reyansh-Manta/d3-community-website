@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Navigation />
 
-      <div className="max-w-7xl mx-auto space-y-8 mb-24">
+      <div className="mx-auto space-y-8 mb-24">
         <Header />
         <HeroSection />
 
