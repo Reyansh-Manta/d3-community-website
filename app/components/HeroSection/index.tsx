@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import HeroIcon from './HeroIcon';
 // import Robot3D from './Robot3D'; // Commented out for now, will be used in future
 
 export default function HeroSection() {
@@ -11,29 +11,8 @@ export default function HeroSection() {
       {/* 3D Robot Model - Commented out for now, will be used in future */}
       {/* <Robot3D /> */}
 
-      {/* Robot Image for Tablet - Top right corner */}
-      <div className="hidden md:flex lg:hidden absolute top-6 right-6 w-64 h-64 pointer-events-none z-[1] items-start justify-end">
-        <Image
-          src="/D3 robot flying.png"
-          alt="D3 Robot Flying"
-          width={400}
-          height={400}
-          className="object-contain w-full h-full"
-          priority
-        />
-      </div>
-
-      {/* Robot Image for Laptop/Desktop - Temporary replacement */}
-      <div className="hidden lg:flex absolute top-1/2 right-0 xl:right-40 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none z-[1] items-center justify-center">
-        <Image
-          src="/D3 robot pose.png"
-          alt="D3 Robot"
-          width={800}
-          height={800}
-          className="object-contain w-full h-full"
-          priority
-        />
-      </div>
+      {/* Hero Icon - Renders tablet and desktop images based on device type */}
+      <HeroIcon variant="desktop" />
 
       {/* Glowing Orb Background with new brand color */}
       <div
@@ -82,17 +61,8 @@ export default function HeroSection() {
         </p>
 
         <div className="flex gap-4 relative md:static h-[180px] md:h-auto items-end">
-          {/* Robot Image for Mobile - Sitting on Join Discord button */}
-          <div className="flex md:hidden absolute -top-4 right-0 w-32 h-32 pointer-events-none z-30 items-end justify-end">
-            <Image
-              src="/D3 robot sitting.png"
-              alt="D3 Robot Sitting"
-              width={200}
-              height={200}
-              className="object-contain w-full h-full"
-              priority
-            />
-          </div>
+          {/* Mobile Hero Icon - Positioned relative to button container */}
+          <HeroIcon variant="mobile" />
           <a
             href="#events"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all hover:shadow-lg hover:scale-105"
