@@ -39,11 +39,15 @@ export default function Home() {
           <NextEventCard />
           <LocationCard />
           <StatsCard />
+          <div className="flex flex-wrap gap-4 md:gap-6">
           {/* Call for Speakers Section */}
           <CallForSpeakers />
           <CallForVolunteers />
+          </div>
+          <div className="flex flex-wrap gap-4 md:gap-6">
           <SocialCard />
           <TechStackCard />
+          </div>
         </section>
 
         {/* Secondary Section: Past Logs & Team */}
